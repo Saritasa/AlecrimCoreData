@@ -87,7 +87,7 @@
                     if !reloadData {
                         let indexPath = sectionOffset > 0 ? IndexPath(item: indexPath.item, section: indexPath.section + sectionOffset) : indexPath
                         
-                        if !deletedSectionIndexes.contains(indexPath.section) && deletedItemIndexPaths.index(of: indexPath) == nil && updatedItemIndexPaths.index(of: indexPath) == nil {
+                        if !deletedSectionIndexes.contains(indexPath.section) && deletedItemIndexPaths.firstIndex(of: indexPath) == nil && updatedItemIndexPaths.firstIndex(of: indexPath) == nil {
                             updatedItemIndexPaths.append(indexPath)
                         }
                     }
@@ -98,7 +98,7 @@
                         let indexPath = sectionOffset > 0 ? IndexPath(item: indexPath.item, section: indexPath.section + sectionOffset) : indexPath
                         
                         if newIndexPath == indexPath {
-                            if !deletedSectionIndexes.contains(indexPath.section) && deletedItemIndexPaths.index(of: indexPath) == nil && updatedItemIndexPaths.index(of: indexPath) == nil {
+                            if !deletedSectionIndexes.contains(indexPath.section) && deletedItemIndexPaths.firstIndex(of: indexPath) == nil && updatedItemIndexPaths.firstIndex(of: indexPath) == nil {
                                 updatedItemIndexPaths.append(indexPath)
                             }
                         }

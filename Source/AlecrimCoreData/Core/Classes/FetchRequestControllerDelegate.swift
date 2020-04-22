@@ -50,6 +50,8 @@ internal final class FetchRequestControllerDelegate<T: NSManagedObject>: NSObjec
             for closure in self.didMoveObjectClosures {
                 closure(anObject as! T, indexPath!, newIndexPath!)
             }
+        @unknown default:
+            break
         }
     }
     
